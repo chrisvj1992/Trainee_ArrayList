@@ -1,7 +1,7 @@
 public class ArrayList implements List {
     private String[] elements;
     private int size;
-    private static final int LENGHT_ARRAY = 2;
+    private static final int LENGHT_ARRAY = 10;
 
     public ArrayList() {
         this.elements = new String[LENGHT_ARRAY];
@@ -57,7 +57,7 @@ public class ArrayList implements List {
     }
 
     private void listCapacity() {
-        if (size == LENGHT_ARRAY) {
+        if (size == elements.length) {
             int newLenght = LENGHT_ARRAY * 2;
             String[] newElements = new String[newLenght];
             for (int i = 0; i < size; i++) {
