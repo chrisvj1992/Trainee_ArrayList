@@ -58,12 +58,13 @@ public class ArrayList implements List {
 
     private void listCapacity() {
         if (size == elements.length) {
-            int newLenght = LENGHT_ARRAY * 2;
+            int newLenght = elements.length * 2;
             String[] newElements = new String[newLenght];
             for (int i = 0; i < size; i++) {
                 newElements[i] = elements[i];
             }
             elements = newElements;
+            System.out.println("valor incrementado");
         }
     }
 

@@ -5,18 +5,11 @@ public class Main {
 
         ArrayList myList = new ArrayList();
 
+
         myList.add("Platano");
         myList.add("Manzana");
         myList.add("Garbanzo");
         myList.add("Naranja");
-        myList.add("Piña");
-
-        myList.add("Piña");
-
-        myList.add("Piña");
-
-        myList.add("Piña");
-
         myList.add("Piña");
 
 
