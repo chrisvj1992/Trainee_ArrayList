@@ -12,6 +12,17 @@ public class Main {
         myList.add("Naranja");
         myList.add("Piña");
 
+        myList.add(1, "Pera");
+        myList.remove("Garbanzo");
+        myList.remove("Platano");
+        myList.remove("Manzana");
+        myList.remove("Pera");
+        myList.remove("Naranja");
+        myList.remove("Piña");
+        myList.remove("Pia");
+
+
+
 
         for(int i = 0; i < myList.size(); i++){
             System.out.println(myList.get(i));

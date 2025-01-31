@@ -17,33 +17,39 @@ public class ArrayList implements List {
 
     @Override
     public void add(int index, String element) {
-        listCapacity();
-        //recorre la lista hacia la derecha, hasta que llega al index, copia el elemento y aumenta el tamaño de la lista
-        for (int i = size; i > index; i--) {
-            elements[i] = elements[i - 1];
-            elements[i - 1] = element;
+        listCapacity();                                 //evalua el tamaño del arreglo
+        for (int i = size; i > index; i--) {            //recorre la lista desde el final pasando por cada espacio hasta llegar al index
+            elements[i] = elements[i - 1];              // copia el valor del elemento que hay a la izquierda, a la derecha
         }
+        elements[index] = element;                      //aqui se sobreescribe el valor por el nuevo a añadir, ya copiando el anterior
         size++;
     }
 
     @Override
     public void remove(String element) {
-        for (int i = 0; i < size; i++) {
-            if (elements[i].equals(element)) {
-                for (int j = i; j < size - 1; j++) {
-                    elements[j] = elements[j + 1];
+        if(size > 0) {
+            for (int i = 0; i < size; i++) {
+                if (elements[i].equals(element)) {
+                    for (int j = i; j < size - 1; j++) {
+                        elements[j] = elements[j + 1];
+                    }
+                    size--;
                 }
-                size--;
             }
         }
     }
 
     @Override
     public void remove(int index) {
-        for (int i = index; i < size - 1; i++) {
-            elements[i] = elements[i + 1];
+        if(size > 0){
+            for (int i = index; i < size - 1; i++) {
+                elements[i] = elements[i + 1];
+            }
+            size--;
         }
-        size--;
+        else{
+            System.out.println("No hay elementos en la lista");
+        }
     }
 
     @Override
